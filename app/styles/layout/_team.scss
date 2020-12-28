@@ -1,0 +1,75 @@
+@include hoverEffect(".team", "boxed");
+.team {
+  padding: 10rem 0;
+  background-color: white;
+  &-list {
+    margin-top: 100px;
+  }
+  &-item {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.25s linear;
+  }
+  &-info {
+    padding: 25px;
+    text-align: center;
+  }
+  &-name {
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    color: $heading-color;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  &-position {
+    font-size: 15px;
+    font-style: italic;
+  }
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: $secondary-color;
+    font-size: 20px;
+    color: $primary-color;
+    transition: all 0.2s linear;
+    &:not(:first-child) {
+      border-left: 1px solid $primary-color;
+    }
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+  @include minWidth(768px) {
+    &-list {
+      display: flex;
+      margin-left: -30px;
+    }
+    &-item {
+      margin-left: 30px;
+      width: calc(33.33% - 30px);
+    }
+  }
+  @include maxWidth(1023px) {
+    padding: 50px 0;
+    &-list {
+      margin-top: 40px;
+    }
+    &-item {
+      margin-bottom: 30px;
+    }
+    &-social-link {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+}

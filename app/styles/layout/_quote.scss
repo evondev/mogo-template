@@ -1,0 +1,99 @@
+.quote {
+  background-color: $bg-color;
+  padding: 70px 0;
+  &-info {
+    padding-left: 60px;
+    width: calc(100% - 15rem);
+  }
+  &-icon {
+    @include size(15rem);
+    padding: 4rem;
+    color: $third-color;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid currentColor;
+  }
+  &-content {
+    font-size: 24px;
+    line-height: 1.4;
+    font-style: italic;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  &-author {
+    color: $heading-color;
+    font-size: 24px;
+    font-family: $third-font;
+    position: relative;
+    padding-left: 80px;
+    display: inline-block;
+  }
+  &-author:before {
+    content: "";
+    @include size(70px, 4px);
+    background-color: $primary-color;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .slick-initialized .slick-slide.quote-item {
+    display: flex;
+    align-items: center;
+    padding: 0 110px;
+  }
+  .slick-slider.quote-list {
+    position: relative;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $text-color;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+}
+@include maxWidth(1023px) {
+  .quote {
+    padding: 30px 0;
+    &-item {
+      flex-direction: column;
+    }
+    &-info {
+      padding-left: 0;
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .slick-initialized .slick-slide.quote-item {
+      padding: 0 40px;
+    }
+  }
+}
+@include maxWidth(479px) {
+  .quote-icon {
+    @include size(10rem);
+    font-size: 20px;
+    border-width: 2px;
+    border-radius: 100rem;
+    background-color: #fff;
+  }
+  .quote-content {
+    font-size: 16px;
+  }
+  .quote-author {
+    font-size: 20px;
+  }
+  .quote .slick-initialized .slick-slide.quote-item {
+    padding: 0;
+  }
+}

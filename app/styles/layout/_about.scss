@@ -1,0 +1,39 @@
+@include hoverEffect(".about");
+@include flexLayout(".about");
+.about {
+  padding: 85px 0 105px;
+  background-color: white;
+  &-list {
+    margin-top: 100px;
+  }
+  &-item {
+    z-index: 1;
+  }
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  &-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $secondary-font;
+    font-size: 18px;
+  }
+  @include maxWidth(1023px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &-list {
+      margin-top: 40px;
+    }
+  }
+  @include maxWidth(767px) {
+    &-item {
+      height: 280px;
+    }
+  }
+}

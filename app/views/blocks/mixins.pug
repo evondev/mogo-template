@@ -1,0 +1,26 @@
+mixin menuItem(text, href="#", className="menu-link")
+	li.menu-item
+		a(class= className href= href)= text
+			if block
+				block
+
+mixin boxed(caption, heading, desc = "")
+	.boxed
+		h4.boxed-caption= caption
+		h2.boxed-heading= heading
+		if desc
+			p.boxed-desc= desc
+
+mixin serviceItem(icon, title, desc="Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+	.service-item
+		i.service-icon(class= icon)
+		.service-info
+			h3.service-title= title
+			p.service-desc= desc
+
+mixin aboutItem(image, icon, title)
+	.about-item
+		img.about-image(src= image)
+		.about-content
+			i.fa.about-icon(class= icon)
+			span.about-title= title

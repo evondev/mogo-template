@@ -1,0 +1,17 @@
+$wrapper: 1920px;
+$container: 1240px;
+$gap: 20px;
+$primary-color: #e98382;
+$secondary-color: #eed688;
+$third-color: #95e1d3;
+$heading-color: #333;
+$text-color: #999;
+$bg-color: #f8f8f8;
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+$third-font: "Kaushan Script";
+$linear: linear-gradient(
+  to bottom,
+  rgba($primary-color, 0.85),
+  rgba($secondary-color, 0.85)
+);

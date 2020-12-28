@@ -1,0 +1,150 @@
+.footer {
+  background-color: #f8f8f8;
+  padding-top: 70px;
+
+  &-title {
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    height: 55px;
+    color: $heading-color;
+    font-weight: 500;
+  }
+  &-desc {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+  .follower {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    color: $heading-color;
+    &-count {
+      font-weight: bold;
+      font-family: $secondary-font;
+      margin-right: 10px;
+    }
+  }
+  .follow {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  .follow-link {
+    margin-left: 15px;
+    font-size: 20px;
+    color: $third-color;
+  }
+  .subscribe-form {
+    display: flex;
+    width: 100%;
+  }
+  .subscribe-input {
+    padding: 15px;
+    border: 0;
+    font-size: 15px;
+    font-family: $primary-font;
+    width: 100%;
+    &::-webkit-input-placeholder {
+      font-style: italic;
+      font-weight: 300;
+    }
+    &::-moz-input-placeholder {
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+  .subscribe-button {
+    flex-shrink: 0;
+    padding: 15px 35px;
+    color: white;
+    font-family: $secondary-font;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0;
+    background-color: $third-color;
+  }
+  .blog-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .blog-image {
+    width: 120px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+  .blog-content {
+    padding-left: 20px;
+    width: 100%;
+  }
+  .blog-title {
+    text-transform: uppercase;
+    color: $heading-color;
+    margin-bottom: 10px;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .blog-time {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+  }
+  .instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .instagram-item {
+    width: 33.33%;
+    height: 0;
+    padding-bottom: 33.33%;
+    position: relative;
+    margin-bottom: 1px;
+  }
+  .instagram-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include minWidth(1024px) {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &-item {
+      width: 35%;
+    }
+    &-item:first-child {
+      width: 40%;
+      padding-right: 40px;
+    }
+    &-item:last-child {
+      width: 25%;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-item {
+      margin-bottom: 50px;
+    }
+  }
+}

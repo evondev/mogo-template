@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+input {
+  outline: none;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+.logo {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block;
+  font-family: $secondary-font;
+  &--footer {
+    font-size: 36px;
+    color: #ccc;
+  }
+}
